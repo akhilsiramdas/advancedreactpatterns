@@ -27,35 +27,35 @@ function Toggle({children}) {
 // your context won't be exposed to the user
 // 💰 `const context = React.useContext(ToggleContext)`
 // 📜 https://reactjs.org/docs/hooks-reference.html#usecontext
-// function ToggleOn({on, children}) {
-//   return on ? children : null
-// }
+function ToggleOn({on, children}) {
+  return on ? children : null
+}
 
-// // 🐨 do the same thing to this that you did to the ToggleOn component
-// function ToggleOff({on, children}) {
-//   return on ? null : children
-// }
+// 🐨 do the same thing to this that you did to the ToggleOn component
+function ToggleOff({on, children}) {
+  return on ? null : children
+}
 
-// // 🐨 get `on` and `toggle` from the ToggleContext with `useContext`
-// function ToggleButton({on, toggle, ...props}) {
-//   return <Switch on={on} onClick={toggle} {...props} />
-// }
+// 🐨 get `on` and `toggle` from the ToggleContext with `useContext`
+function ToggleButton({on, toggle, ...props}) {
+  return <Switch on={on} onClick={toggle} {...props} />
+}
 
-// function App() {
-//   return (
-//     <div>
-//       <Toggle>
-//         <ToggleOn>The button is on</ToggleOn>
-//         <ToggleOff>The button is off</ToggleOff>
-//         <div>
-//           <ToggleButton />
-//         </div>
-//       </Toggle>
-//     </div>
-//   )
-// }
+function App() {
+  return (
+    <div>
+      <Toggle>
+        <ToggleOn>The button is on</ToggleOn>
+        <ToggleOff>The button is off</ToggleOff>
+        <div>
+          <ToggleButton />
+        </div>
+      </Toggle>
+    </div>
+  )
+}
 
-// export default App
+export default App
 
 /*
 eslint
